@@ -1,1 +1,8 @@
-<h2>Main Dash</h2>
+<h1>Dashboard</h1>
+
+<%= form_for @shout  do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit "Shout" %>
+<% end %>
+
+<%= render @shouts %>
