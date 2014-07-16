@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find_by(username: params[:id])
+    @shouts = @user.shouts
   end
 
   def create
