@@ -1,8 +1,14 @@
 <h1>Dashboard</h1>
 
-<%= form_for @shout  do |form| %>
-  <%= form.text_field :content %>
+<%= form_for @photo_shout  do |form| %>
+  <%= form.file_field :body %>
   <%= form.submit "Shout" %>
 <% end %>
 
+<%= form_for @text_shout  do |form| %>
+  <%= form.text_field :body %>
+  <%= form.submit "Shout" %>
+<% end %>
+
+<%= render current_user.timeline %>
 <%= render @shouts %>
